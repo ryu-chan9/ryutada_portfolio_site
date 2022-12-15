@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.page-wrapper {
+  display: flow-root;
+  background: floralwhite;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+p {
+  /* font-size: 120px; */
+  padding-left: 15px;
+  padding-top: 4px;
+  padding-bottom: 20px;
+  color: dimgray;
+  letter-spacing: 1px;
+}
+p1 {
+  font-family: Helvetica;
+  font-weight: 100;
+  font-size: 16px;
+  color: dimgray;
+  padding-left: 30px;
+  letter-spacing: 1px;
+}
+p.font-1 {
+  font: 14px/1.5 'Poppins' , sans serif;
+  letter-spacing: 2px;
+}
+p.title {
+  font-family: Helvetica;
+  font-weight: 100;
+  font-size: 10px;
+}
+a {
+  font-family: Helvetica;
+  font-weight: 100;
+}
+
+.v-line {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+.v-line > div {
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 1px;
+  height: 100px;
+}
+
+.v-line2 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+.v-line2 > div {
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 1px;
+  height: 100px;
+  padding-bottom: 40px;
+}
+
+figure {
+  margin-top: -20px;
+}
+figure > img {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+h2 {
+  font-family: Helvetica;
+  font-size: 25px;
+  font-weight: 100;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-bottom: 60px;
+}
+.media-scroller {
+  --_spacer: var(--size-4);
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+
+  padding: var(--_spacer) var(--_spacer) var(--_spacer);
+  padding-top: 12px;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+div::-webkit-scrollbar{
+  display: none;
+}
+.media-element {
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--_spacer);
+  padding: var(--_spacer);
+  background: var(--surface-2);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-3);
+}
+.media-element > img {
+  inline -size: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  transition:transform 0.25s ease;
+}
+img:hover {
+  -webkit-transform:scale(1.5);transform:scale(1.5)
+
+}
